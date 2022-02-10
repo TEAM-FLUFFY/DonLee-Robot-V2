@@ -70,9 +70,8 @@ async def start(bot: DonLee_Robot_V2, msg: Import.Msg):
      Import.Button('➕ Add Me To Your Groups ➕', url='http://t.me/donlee_robot?startgroup=true')
     ]]
     await msg.reply_photo(
-    photo=random.choice(Config.PHOTO),
     caption=Text.START_TEXT.format(msg.from_user.mention, Config.DEV_ID),
-    reply_markup=Import.Markup(START_BUTTON))
+    reply_markup=Import.Markup(START_BUTTON)),
 
 
 @DonLee_Robot_V2.on_message(filters.command(["help"]) & filters.private, group=1)
